@@ -1,0 +1,6 @@
+$schema: https://azuremlschemas.azureedge.net/latest/model.schema.json
+name: personalization_model_demo_tf
+version: 1
+type: custom_model
+path: ./personalization_model_demo_tf
+description: cc-model.

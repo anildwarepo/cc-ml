@@ -1,0 +1,13 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+name: green
+endpoint_name: cc-endpoint
+model: azureml:personalization_model_demo_tf:1 #setup replace `mlops-workshop-endpoint` with your own endpoint name defined in endpoint.yml
+#egress_public_network_access: disabled # not required for managed vnet
+
+code_configuration:
+  code: ./
+  scoring_script: score.py
+environment: azureml:cc-ml-acr:1
+instance_type: Standard_DS1_v2
+instance_count: 1
+app_insights_enabled: true

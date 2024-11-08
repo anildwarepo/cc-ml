@@ -1,0 +1,15 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+name: green
+endpoint_name: cc-endpoint
+model: azureml:personalization_model_demo_tf:1
+  # You can also specify model files path inline
+  # path: examples/flows/chat/basic-chat
+environment: azureml:cc-ml:4
+  # inference config is used to build a serving container for online deployments
+
+code_configuration:
+  code: ./
+  scoring_script: score.py
+
+instance_type: Standard_DS1_v2
+instance_count: 1

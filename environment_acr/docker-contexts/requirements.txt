@@ -1,0 +1,7 @@
+numpy 
+tensorflow==2.16.1 
+pandas 
+joblib==1.4.2 
+azureml-inference-server-http
+Flask==2.1.2 
+Werkzeug==2.0.3
